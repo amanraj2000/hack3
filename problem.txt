@@ -1,0 +1,28 @@
+PROBLEM:
+
+A pathologist was matching DNAs using its components such as Adenine, Cytosine, etc.
+He identified that there are total 26 components represented by 26 letters of the English
+alphabet. Given a sequence of Gene components, his task was to return the similarity
+between the two components. He considered the following similarity metric
+Similarity: sum(len(G1),len(G2)) - Dis(G1,G2)), where Dis is the minimum modification
+distance between two gene sequences. Following three modification operations are
+allowed - insert, replace and delete and each operation costs 1. Modification distance
+between two strings is defined as minimum total cost incurred to convert one string to
+other.
+Effect of three operations can be understood from the following example. Let us say the
+initial string (gene) is ABCDD:
+Insert F at the end == ABCDDF
+Replace A with V == VBCDDF
+Delete F from end == VBCDD
+For given genes: ABCGT and GTBAC
+Similarity=10-5 = 5 where 10 is the sum of length of both the string and 5 is the minimum
+number of required operations.
+Given a pair of gene sequences calculate the Similarity using memoization.
+
+INPUT FORMAT:
+Enter gene1= ABCGT
+Enter gene2= GTBAC
+
+Output:
+Similarity: 5
+Total number of operations required =5
